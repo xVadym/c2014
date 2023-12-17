@@ -186,7 +186,7 @@ class Job:
         self.gladness_less = job_list[self.job]["gladness_less"]
 
 nick=Human(name="Nick")
-for day in range(1,8)
+for day in range(1,8):
     if nick.live(day)==False:
         break
 
