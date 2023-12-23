@@ -161,11 +161,20 @@ class Auto:
         else:
             print("The car can not move")
             return False
+class hobby:
+    def __init__(self, list_of_hobby):
+        self.hobby=random.choice(list(list_of_hobby))
 
 class House:
     def __init__(self):
         self.food=0
         self.mess=0
+list_of_hobby = {
+    "Fitness": { "strenght": 35, "heavy": 5},
+    "Karate": { "strenght": 75, "heavy": 15},
+    "Weightlifting": { "strenght": 125, "heavy": 45},
+    "Boxing": { "strenght": 150, "heavy": 14}}
+
 brand_of_car = {
     "BMW": {"fuel": 100, "strenght": 100, "consuption": 12},
     "Toyota": {"fuel": 500, "strenght": 60, "consuption": 10},
