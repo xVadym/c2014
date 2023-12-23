@@ -127,7 +127,7 @@ class Human:
         elif self.money<0:
             print("Start working")
             self.work()
-        elif self.car.srength<15:
+        elif self.car.strength<15:
             print("I need to repair my car")
             self.to_reapir()
         elif dice==1:
@@ -149,7 +149,7 @@ class Auto:
     def __init__(self, brand_list):
         self.brand=random.choice(list(brand_list))
         self.fuel=brand_list[self.brand]["fuel"]
-        self.strength = brand_list[self.brand]["strenght"]
+        self.strength = brand_list[self.brand]["strength"]
         self.consumption = brand_list[self.brand]["consumption"]
 
 
@@ -170,16 +170,16 @@ class House:
         self.food=0
         self.mess=0
 list_of_hobby = {
-    "Fitness": { "strenght": 35, "heavy": 5},
-    "Karate": { "strenght": 75, "heavy": 15},
-    "Weightlifting": { "strenght": 125, "heavy": 45},
-    "Boxing": { "strenght": 150, "heavy": 14}}
+    "Fitness": { "strength": 35, "heavy": 5},
+    "Karate": { "strength": 75, "heavy": 15},
+    "Weightlifting": { "strength": 125, "heavy": 45},
+    "Boxing": { "strength": 150, "heavy": 14}}
 
 brand_of_car = {
-    "BMW": {"fuel": 100, "strenght": 100, "consuption": 12},
-    "Toyota": {"fuel": 500, "strenght": 60, "consuption": 10},
-    "Volvo": {"fuel": 70, "strenght": 150, "consuption": 8},
-    "Ferrari": {"fuel": 80, "strenght": 150, "consuption": 14}}
+    "BMW": {"fuel": 100, "strength": 100, "consumption": 12},
+    "Toyota": {"fuel": 500, "strength": 60, "consumption": 10},
+    "Volvo": {"fuel": 70, "strength": 150, "consumption": 8},
+    "Ferrari": {"fuel": 80, "strength": 150, "consumption": 14}}
 
 job_list={
     "Java developer":{"salary":50, "gladness_less":10},
