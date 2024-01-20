@@ -1,22 +1,33 @@
 import random
 class Vadym:
-    def __init__(self,name):
+    def __init__(self,name="Vadym", cat=None):
         self.name=name
         self.gladness=50
         self.progress=0
         self.alive=True
         self.energy=5
-
+        self.cat=cat
+    def get_cat(self):
+        self.cat=cat(cat)
     def to_wakeup(self):
         print("I get up")
         self.progress+=4
         self.gladness-=3
         self.energy+=10
+    def to_feed_cat(self):
+        print("time to feed my cat")
+        self.progress+=1
+        self.gladness+=2
     def to_brush_my_teeth(self):
         print("I am brushing my teeth")
         self.progress+=2
-        self.gladness -= 3
+        self.gladness += 3
         self.energy += 10
+
+    def to_hug_my_cat(self):
+        print("i want to hug my cat")
+        self.progress+=1
+        self.gladness+=5
     def to_have_breakfast(self):
         print("time to have a breakfast")
         self.progress+=2
@@ -37,11 +48,19 @@ class Vadym:
         self.progress+=1
         self.gladness-=1
         self.energy -= 3
+    def to_clean_up_after_cat(self):
+        print("Time to clean up after cat")
+        self.gladness-=0
+
     def to_chill(self):
         print("I am tired...\n I want to chill")
         self.progress += 2
         self.gladness -= 4
         self.energy += 6
+    def to_feed_my_cat(self):
+        self.progress+=1
+        self.gladness+=2
+
     def to_have_dinner(self):
         print("I want to eat")
         self.progress += 1
@@ -85,16 +104,33 @@ class cat:
         self.name=name
         self.gladness_less=50
         self.alive=True
+        self.energy=8
 
-    def to_feed_cat(self):
-        print("Let`s feed Persyk")
+    def to_sleep(self):
+        print("I want to sleep")
         self.gladness_less -= 4
-    def to_play_with_cat(self):
-        print("Let`s play with him")
-        self.gladness_less -= 5
-    def to_pet(self):
-        print("I want to pet him")
-        self.gladness_less -= 4
+        self.energy+=7
+    def to_eat(self):
+        print("I am hungry")
+        self.gladness_less += 4
+        self.energy +=5
+    def to_damage_smth(self):
+        print("I want to damage something XD")
+        self.gladness_less +=10
+        self.energy -=4
+    def to_run_like_ferrari(self):
+        print("I want to run")
+        self.gladness_less +=6
+        self.energy -=5
+
+    def is_alive(self):
+        if self.gladness_less < 5:
+            print("i am bored")
+            self.alive = False
+        elif self.energy <= 2:
+            print("I am tired")
+            self.alive = False
+
 
 Vadym=Vadym(name="Vadym")
 for day in range(365):
